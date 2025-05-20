@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nike Smart Insole | Home</title>
+<a href="cart.html" class="cart-icon">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="cart-count">0</span>
+</a>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="js/cart.js"></script>
+
+  <style>
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: red;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      color: #111;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-icons input {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .nav-icons i {
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .hero {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero-content {
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .new-arrivals, .featured-section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .new-arrivals h2, .featured-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 1;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      flex: 0 0 auto;
+      width: 250px;
+      margin-right: 0;
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 50px;
+      text-align: center;
+    }
+
+    .slide img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .slide h3 {
+      margin: 0rem 0;
+    }
+
+    .featured-section img {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 1rem;
+    }
+
+    .featured-section .discover-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      margin-top: 1rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+    }
+.add-to-cart {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #333;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/nikelogo.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">New</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">Kids</a></li>
+    </ul>
+    <div class="nav-icons">
+      <input type="text" placeholder="Search">
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </header>
+
+  <!-- Hero Video Section -->
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="videos/comm.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>JUST DO IT</h1>
+      <p>explore the new technologies</p>
+    </div>
+  </section>
+
+   <section class="new-arrivals">
+    <h2>New Arrivals</h2>
+    <div class="slider">
+      <div class="slide"><img src="images/1.jpg" alt="Product 1">
+<p class="price">$49.99</p>
+ <button class="add-to-cart" 
+          data-id="1" 
+          data-name="tshirt" 
+          data-price="49.99" 
+          data-image="images/1.jpg">
+    Add to Cart
+  </button></div>
+      <div class="slide"><img src="images/2.jpg" alt="Product 1">
+<p class="price">$29.99</p>
+ <button class="add-to-cart" 
+          data-id="2" 
+          data-name="bag air" 
+          data-price="29.99" 
+          data-image="images/2.jpg">
+    Add to Cart
+  </button></div>
+<div class="slide"><img src="images/men2.jpg" alt="Product 1">
+<p class="price">$45</p>
+
+ <button class="add-to-cart" 
+          data-id="3" 
+          data-name="Nike"  
+          data-price="45" 
+          data-image="images/men2.jpg">
+    Add to Cart
+  </button>
+</div>
+<div class="slide"><img src="images/shirt.jpg" alt="Product 1">
+<p class="price">$50</p>
+ <button class="add-to-cart" 
+          data-id="4" 
+          data-name="tshirt" 
+          data-price="50" 
+          data-image="images/shirt.jpg">
+    Add to Cart
+  </button></div>
+<div class="slide"><img src="images/sweats.jpg" alt="Product 1">
+<p class="price">$150</p>
+ <button class="add-to-cart" 
+          data-id="5" 
+          data-name="air force" 
+          data-price="150" 
+          data-image="images/air force.jpg">
+    Add to Cart
+  </button></div>
+      
+    </div>
+  </section>
+
+  
+
+  <!-- Featured Product -->
+  <section class="featured-section">
+    <h2>Featured Product</h2>
+    <img src="images/comm.jpeg" alt="Nike Smart Insole">
+    <p>Experience unmatched support and smart step tracking with the Nike Stride+.</p>
+    <a href="product2.html" class="discover-btn">Discover Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Nike Smart Insole. All rights reserved.</p>
+    <a href="support.html" class="complaint-btn">Send Complaint / Customization</a>
+  </footer>
+
+</body>
+</html>

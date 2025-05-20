@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page | Nike Smart Insole</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #111;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-icons input {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .nav-icons i {
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .product-section {
+      max-width: 1200px;
+      margin: 4rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      padding: 0 2rem;
+    }
+
+    .product-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-details {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-details h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .product-details p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #28a745;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-buy {
+      background-color: #111;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .btn-buy:hover {
+      background-color: #333;
+    }
+
+    .btn-add {
+      background-color: transparent;
+      color: #111;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #111;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-add:hover {
+      background-color: #111;
+      color: white;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+    }
+
+    /* 🔹 Video Section */
+    .video-section {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .product-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .video-overlay h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .video-overlay p {
+      font-size: 20px;
+    }
+
+ .how-it-works {
+      background: #f7f7f7;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .how-it-works h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .steps {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .step {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      max-width: 300px;
+      flex: 1 1 250px;
+    }
+
+    .step img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .step h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/nikelogo.png" alt="Logo">NIKE</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">Kids</a></li>
+    </ul>
+    <div class="nav-icons">
+      <input type="text" placeholder="Search">
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </header>
+
+  <!-- 🔹 Video Section -->
+  <section class="video-section">
+    <video autoplay muted loop class="product-video">
+      <source src="videos/insole1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay">
+      <h1>Nike Stride+</h1>
+      <p>Next-Gen Comfort. Real-Time Performance Data.</p>
+    </div>
+  </section>
+
+ <!-- Product Section -->
+  <section class="product-section">
+    <div class="product-image">
+      <img src="images/insole.jpeg" alt="Nike Smart Insole">
+    </div>
+    <div class="product-details">
+      <h1>Nike Stride +</h1>
+      <p>Designed for smart performance and everyday comfort, the Nike Smart Insole features real-time step tracking and adaptive support that fits your lifestyle.</p>
+      <p class="price">$130</p>
+      <a href="cart.html" class="btn-buy">Buy Now</a>
+      <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="images/dropitin (8).jpeg" alt="Step 1">
+        <h3>Step Tracking</h3>
+        <p>Tracks every step with precision sensors embedded in the insole.</p>
+      </div>
+      <div class="step">
+        <img src="images/dropitin (3).jpeg" alt="Step 2">
+        <h3>Smart Support</h3>
+        <p>Adapts to your arch and stride in real time for personalized comfort.</p>
+      </div>
+      <div class="step">
+        <img src="images/dropitin (2).jpeg" alt="Step 3">
+        <h3>Connect to App</h3>
+        <p>Sync data via Bluetooth with the Nike Fit+ app for insights and goals.</p>
+</div>
+ <div class="step">
+        <img src="images/setup.jpeg" alt="Step 4">
+        <h3>Step Into Comfort</h3>
+        <p>Smart Support That Moves With You.</p>
+      </div>
+      <div class="step">
+        <img src="images/custom.png" alt="Step 5">
+        <h3>Comfort Meets Style—Designed by You.</h3>
+        <p>Highlights both fashion and personalization.</p>
+      
+      </div>
+
+<section class="video-section">
+
+    <video autoplay muted loop class="product-video">
+      <source src="videos/add.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+     </section>
+
+    </div>
+  </section>
+
+ 
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Nike Smart Insole. All rights reserved.</p>
+    <a href="support.html" class="complaint-btn">Send Complaint / Customization</a>
+  </footer>
+

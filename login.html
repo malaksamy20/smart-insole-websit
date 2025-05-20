@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Nike Smart Insole</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-icons input {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .nav-icons i {
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .auth-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .auth-box h2 {
+      margin-bottom: 1rem;
+    }
+
+    .auth-box form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .auth-box input {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .auth-box button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .auth-box button:hover {
+      background: #333;
+    }
+
+    .auth-box p {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .auth-box a {
+      color: #2962ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-box">
+    <h2>Welcome Back</h2>
+    <form action="login.php" method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="sign up.html">Sign up here</a></p>
+  </div>
+</body>
+</html>

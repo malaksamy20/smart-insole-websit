@@ -1,0 +1,285 @@
+/* style.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #111;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+
+.nav-icons i {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/
+/* New Arrivals */
+.new-arrivals {
+  padding: 2rem;
+  background: #f7f7f7;
+}
+
+.new-arrivals h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 0; /* Set gap to 0 */
+  scroll-behavior: smooth;
+}
+
+.slide {
+  min-width: 250px;
+  flex: 0 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.slide img {
+  width: 50%;
+  border-radius: 8px;
+}
+
+.slide h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #28a745;
+  margin: 0.5rem 0;
+}
+
+.add-cart {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #111;
+  color: white;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-cart:hover {
+  background: #333;
+}
+
+.spotlight-product {
+  background: #fff;
+  padding: 4rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.spotlight-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.spotlight-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.spotlight-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.spotlight-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.spotlight-text p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.spotlight-price {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #28a745;
+}
+
+.spotlight-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.spotlight-btn:hover {
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .spotlight-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .slider {
+    gap: 0.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.search-box input:focus {
+  border-color: #000;
+}
+
+.search-box i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+}
+
+.cart-icon i {
+  font-size: 1.4rem;
+  color: #111;
+  transition: 0.3s;
+}
+
+.cart-icon:hover i {
+  color: #000;
+}
+
+/* Footer */
+.footer {
+  background: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4); /* Optional: darkens the background for readability */
+  padding: 2rem;
+  border-radius: 10px;
+}
+.video-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+}
